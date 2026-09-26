@@ -1,0 +1,19 @@
+{
+  "name": "cartorio-distribuido-backend",
+  "version": "1.0.0",
+  "description": "API Node.js/Express para o Cartório Distribuído",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {
+    "cartorio-distribuido": "file:..",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.1",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "pdfkit": "^0.15.0"
+  }
+}

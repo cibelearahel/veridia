@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background-color: #FBFBFA;
+  color: #111111;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Switzer', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: 
+    radial-gradient(at 15% 10%, rgba(31, 108, 159, 0.02) 0px, transparent 40%),
+    radial-gradient(at 85% 15%, rgba(52, 101, 56, 0.02) 0px, transparent 40%),
+    radial-gradient(at 50% 90%, rgba(149, 100, 0, 0.015) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+@layer components {
+  /* Editorial Bento Card */
+  .bento-card {
+    @apply bg-white border border-[#EAEAEA] rounded-xl p-6 sm:p-8 transition-all duration-200 hover:border-[#DCDCDC] hover:shadow-[0_2px_8px_rgba(0,0,0,0.03)];
+  }
+
+  .bento-card-subtle {
+    @apply bg-[#F7F6F3] border border-[#EAEAEA] rounded-xl p-5 sm:p-6 transition-all duration-200;
+  }
+
+  /* Form Elements */
+  .editorial-input {
+    @apply w-full bg-white border border-[#EAEAEA] rounded-md px-3.5 py-2.5 text-xs sm:text-sm text-[#111111] placeholder-[#9E9E9C] focus:outline-none focus:border-[#111111] focus:ring-1 focus:ring-[#111111] transition-all duration-150;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md font-medium text-xs text-white bg-[#111111] hover:bg-[#2A2A2A] active:scale-[0.98] transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-[#111111] disabled:active:scale-100;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md font-medium text-xs text-[#111111] bg-white border border-[#EAEAEA] hover:bg-[#F7F6F3] hover:border-[#DCDCDC] active:scale-[0.98] transition-all duration-150 disabled:opacity-40;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md font-medium text-xs text-[#9F2F2D] bg-[#FDEBEC] border border-[#FAD1D3] hover:bg-[#F9DFE1] active:scale-[0.98] transition-all duration-150;
+  }
+
+  /* Muted Pastel Status Tags */
+  .badge-valid {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium tracking-wider uppercase bg-[#EDF3EC] text-[#346538] border border-[#D4E7D2];
+  }
+
+  .badge-revoked {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium tracking-wider uppercase bg-[#FDEBEC] text-[#9F2F2D] border border-[#FAD1D3];
+  }
+
+  .badge-info {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium tracking-wider uppercase bg-[#E1F3FE] text-[#1F6C9F] border border-[#CCE7F8];
+  }
+
+  .badge-warning {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium tracking-wider uppercase bg-[#FBF3DB] text-[#956400] border border-[#F2E2B8];
+  }
+
+  .badge-neutral {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium tracking-wider uppercase bg-[#F7F6F3] text-[#787774] border border-[#EAEAEA];
+  }
+
+  /* Keystroke Micro-UI */
+  .keystroke {
+    @apply inline-flex items-center px-1.5 py-0.5 text-[10px] font-mono rounded bg-[#F7F6F3] border border-[#EAEAEA] text-[#787774];
+  }
+}
+
+/* Animations */
+@keyframes fadeInEntry {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInEntry 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Monospace Code font for hashes and addresses */
+.font-mono-code {
+  font-family: 'Geist Mono', 'JetBrains Mono', 'SF Mono', monospace;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "cartorio-distribuido",
+  "version": "1.0.0",
+  "description": "DApp de Cartório Notarial Distribuído em Ethereum Local (Ganache)",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy:ganache": "hardhat run scripts/deploy.js --network ganache",
+    "deploy:cli": "hardhat run scripts/deploy.js --network ganacheCli",
+    "server": "npm --prefix backend start",
+    "client": "npm --prefix frontend dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "dapp",
+    "ethereum",
+    "ganache",
+    "solidity",
+    "notary",
+    "smart-contract"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "concurrently": "^10.0.5",
+    "hardhat": "^2.22.5"
+  }
+}
