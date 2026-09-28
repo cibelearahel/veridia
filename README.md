@@ -146,11 +146,7 @@ como relatório técnico em dez seções:
 | [04 — Smart Contract](docs/04-smart-contract.md) | `CartorioNotarial.sol`: funções, regras de negócio, ciclo de vida e eventos |
 | [05 — Backend](docs/05-backend.md) | API Express, endpoints, integração com o blockchain e geração de certidão em PDF |
 | [06 — Frontend](docs/06-frontend.md) | SPA React, integração com a MetaMask, painéis e sistema de design |
-| [10 — Conclusão](docs/10-conclusao.md) | Síntese, objetivos atingidos e considerações finais |
-
-**Início rápido:** quem quer entender o trabalho lê
-[01 → 02 → 10](docs/README.md#ordem-de-leitura-sugerida). Quem quer operar o sistema, começa
-por [07 — Implantação e Operação](docs/07-implantacao-e-operacao.md).
+| [07 — Conclusão](docs/07-conclusao.md) | Síntese, objetivos atingidos e considerações finais |
 
 > A especificação de requisitos original, que fundamenta o projeto, está em
 > [`SPECS.md`](SPECS.md).
