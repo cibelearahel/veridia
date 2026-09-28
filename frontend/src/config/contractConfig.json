@@ -1,9 +1,9 @@
 {
-  "contractAddress": "0x2Ee2AfF297c193868Bd9668B579b61f05727eD6b",
-  "networkName": "ganache",
+  "contractAddress": "0x247faE9015bb4ED71ba409627C66b74CB21528c4",
+  "networkName": "ganacheCli",
   "chainId": "1337",
-  "deployedAt": "2026-09-21T21:22:08.797Z",
-  "deployer": "0x6fBe2F94E42748ECaAB5DB3e5c955e10f87178AB",
+  "deployedAt": "2026-09-28T17:22:22.057Z",
+  "deployer": "0x257E177DB2f189E55E6469C1CD648e887FD74e59",
   "abi": [
     {
       "anonymous": false,

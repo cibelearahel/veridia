@@ -7,7 +7,7 @@
     "deploy:ganache": "hardhat run scripts/deploy.js --network ganache",
     "deploy:cli": "hardhat run scripts/deploy.js --network ganacheCli",
     "server": "npm --prefix backend start",
-    "client": "npm --prefix frontend dev",
+    "client": "npm --prefix frontend start",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [

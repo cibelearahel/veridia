@@ -88,7 +88,7 @@ npm --prefix frontend install
 ### Passo 2: Iniciar a Blockchain Local (Ganache)
 Abra o **Ganache GUI** ou execute via terminal:
 ```powershell
-npx ganache --port 7545 --networkId 1337 --chainId 1337
+npx ganache --port 7545 --chain.networkId 1337 --chain.chainId 1337
 ```
 > O Ganache criará 10 contas locais pré-financiadas com 100 ETH cada.
 
