@@ -99,11 +99,10 @@ Execute o script de implantação:
 ```powershell
 # Se estiver usando a porta 7545 (padrão Ganache GUI):
 npm run deploy:ganache
-
-# Se estiver usando a porta 8545 (Ganache CLI):
-npm run deploy:cli
 ```
 > O script implantará o contrato e atualizará automaticamente o arquivo `contractConfig.json` tanto no backend quanto no frontend.
+
+> ⚠️ **Atenção:** o script `npm run deploy:cli` (destinado à porta 8545) **não funciona no estado atual do repositório**, pois a rede `ganacheCli` não está definida em `hardhat.config.js`. Use sempre `npm run deploy:ganache` — o backend detecta automaticamente um nó na porta 8545. Detalhes em [docs/07 — Implantação e Operação](docs/07-implantacao-e-operacao.md#75-ponto-de-atenção-deploycli).
 
 ---
 
@@ -133,4 +132,26 @@ npm run client
 3. Importe uma conta do Ganache copiando a **Chave Privada** (*Private Key*) de qualquer uma das contas listadas no Ganache.
 
 ---
+
+## 5. Documentação
+
+A documentação técnica completa do projeto está em **[`docs/`](docs/README.md)**, organizada
+como relatório técnico em dez seções:
+
+| Seção | Conteúdo |
+| :--- | :--- |
+| [01 — Definição e Escopo](docs/01-definicao-e-escopo.md) | Problema, justificativa da blockchain, objetivos e escopo incluído e fora do escopo |
+| [02 — Arquitetura de Dados](docs/02-arquitetura-de-dados.md) | O que fica **on-chain** (hash, metadados, titularidade, timestamps) e o que fica **off-chain** (o arquivo original) |
+| [03 — Arquitetura do Sistema](docs/03-arquitetura-do-sistema.md) | Organização do repositório e decisões arquiteturais |
+| [04 — Smart Contract](docs/04-smart-contract.md) | `CartorioNotarial.sol`: funções, regras de negócio, ciclo de vida e eventos |
+| [05 — Backend](docs/05-backend.md) | API Express, endpoints, integração com o blockchain e geração de certidão em PDF |
+| [06 — Frontend](docs/06-frontend.md) | SPA React, integração com a MetaMask, painéis e sistema de design |
+| [10 — Conclusão](docs/10-conclusao.md) | Síntese, objetivos atingidos e considerações finais |
+
+**Início rápido:** quem quer entender o trabalho lê
+[01 → 02 → 10](docs/README.md#ordem-de-leitura-sugerida). Quem quer operar o sistema, começa
+por [07 — Implantação e Operação](docs/07-implantacao-e-operacao.md).
+
+> A especificação de requisitos original, que fundamenta o projeto, está em
+> [`SPECS.md`](SPECS.md).
 
